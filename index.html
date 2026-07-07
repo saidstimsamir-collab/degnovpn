@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="ru" style="scroll-behavior: smooth;">
+<head>
+	<!-- Meta -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description" content="DEGNO VPN - официальный сайт VPN-сервиса, скачайте на iPhone, Android и ПК">
+	<meta name="keywords" content="DEGNO VPN">
+	<meta name="author" content="DEGNO VPN">
+	<!-- Page Title -->
+    <title>DEGNO VPN - Официальный сайт провайдера</title>
+
+    <link rel="icon" type="image/x-icon" href="assets/logo.jpg">
+
+	<!-- Google Fonts Css-->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<!-- Bootstrap Css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!-- SlickNav Css -->
+	<link href="css/slicknav.min.css" rel="stylesheet">
+	<!-- Swiper Css -->
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<!-- Font Awesome Icon Css-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<!-- Animated Css -->
+	<link href="css/animate.css" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Main Custom Css -->
+	<link href="css/custom.css" rel="stylesheet" media="screen">
+	<style>
+		.particles {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			pointer-events: none;
+			overflow: hidden;
+		}
+		
+		.particle {
+			position: absolute;
+			width: 4px;
+			height: 4px;
+			background: var(--accent-color);
+			border-radius: 50%;
+			animation: particleFloat 6s infinite;
+		}
+		
+		@keyframes particleFloat {
+			0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+			10% { opacity: 1; }
+			90% { opacity: 1; }
+			100% { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+		}
+		
+		.faq-item {
+			background: linear-gradient(135deg, rgba(169, 62, 23, 0.1) 0%, rgba(21, 57, 154, 0.1) 100%);
+			border: 1px solid var(--divider-color);
+			border-radius: 12px;
+			margin-bottom: 20px;
+			overflow: hidden;
+			transition: all 0.3s ease;
+		}
+		
+		.faq-item:hover {
+			border-color: var(--accent-color);
+			transform: translateY(-5px);
+			box-shadow: 0 10px 30px rgba(169, 62, 23, 0.2);
+		}
+		
+		.faq-question {
+			padding: 20px 25px;
+			cursor: pointer;
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		.faq-question h3 {
+			margin: 0;
+			font-size: 18px;
+			color: var(--primary-color);
+			transition: color 0.3s ease;
+		}
+		
+		.faq-question:hover h3 {
+			color: var(--accent-color);
+		}
+		
+		.faq-icon {
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background: var(--accent-color);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			font-size: 18px;
+			transition: transform 0.3s ease;
+		}
+		
+		.faq-item.active .faq-icon {
+			transform: rotate(45deg);
+			background: var(--accent-secondary-color);
+		}
+		
+		.faq-answer {
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.3s ease, padding 0.3s ease;
+		}
+		
+		.faq-item.active .faq-answer {
+			max-height: 200px;
+			padding: 0 25px 20px;
+		}
+		
+		.faq-answer p {
+			margin: 0;
+			color: var(--text-color);
+			line-height: 1.6;
+		}
+		
+		.service-item {
+			background: linear-gradient(135deg, rgba(169, 62, 23, 0.08) 0%, rgba(21, 57, 154, 0.08) 100%);
+			border: 1px solid var(--divider-color);
+			border-radius: 16px;
+			padding: 35px 30px;
+			margin-bottom: 30px;
+			transition: all 0.4s ease;
+			position: relative;
+			overflow: hidden;
+		}
+		
+		.service-item::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 4px;
+			background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary-color));
+			transform: scaleX(0);
+			transform-origin: left;
+			transition: transform 0.4s ease;
+		}
+		
+		.service-item:hover::before {
+			transform: scaleX(1);
+		}
+		
+		.service-item:hover {
+			transform: translateY(-8px);
+			border-color: var(--accent-color);
+			box-shadow: 0 15px 40px rgba(169, 62, 23, 0.15);
+		}
+		
+		.service-item-content h3 {
+			margin-bottom: 15px;
+			font-size: 22px;
+			color: var(--primary-color);
+			transition: color 0.3s ease;
+		}
+		
+		.service-item:hover h3 {
+			color: var(--accent-color);
+		}
+		
+		.service-item-content h3 a {
+			color: inherit;
+			text-decoration: none;
+			transition: all 0.3s ease;
+		}
+		
+		.service-item-content h3 a:hover {
+			color: var(--accent-color);
+		}
+		
+		.service-item-content p {
+			margin: 0;
+			color: var(--text-color);
+			line-height: 1.7;
+			font-size: 15px;
+		}
+		
+		.service-list {
+			background: linear-gradient(135deg, rgba(169, 62, 23, 0.05) 0%, rgba(21, 57, 154, 0.05) 100%);
+			border: 1px solid var(--divider-color);
+			border-radius: 16px;
+			padding: 30px;
+			margin-top: 30px;
+		}
+		
+		.service-list ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 15px;
+		}
+		
+		.service-list li {
+			background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary-color));
+			color: white;
+			padding: 14px 28px;
+			border-radius: 50px;
+			font-size: 14px;
+			font-weight: 600;
+			transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			cursor: default;
+			position: relative;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+		
+		.service-list li::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+			transition: left 0.5s ease;
+		}
+		
+		.service-list li:hover::before {
+			left: 100%;
+		}
+		
+		.service-list li:hover {
+			transform: translateY(-5px) scale(1.05);
+			box-shadow: 0 12px 30px rgba(169, 62, 23, 0.4);
+		}
+		
+		.service-list li i {
+			font-size: 12px;
+		}
+		
+		.navbar-brand {
+			animation: logoGlow 5s ease-in-out infinite;
+		}
+		
+		@keyframes logoGlow {
+			0%, 100% {
+				background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary-color));
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				transform: scale(1);
+				filter: drop-shadow(0 0 0 rgba(169, 62, 23, 0));
+			}
+			50% {
+				background: linear-gradient(135deg, var(--accent-secondary-color), var(--accent-color));
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				transform: scale(1.05);
+				filter: drop-shadow(0 0 20px rgba(169, 62, 23, 0.5));
+			}
+		}
+		
+		footer {
+			background: linear-gradient(135deg, rgba(169, 62, 23, 0.1) 0%, rgba(21, 57, 154, 0.1) 100%);
+			border-top: 2px solid var(--divider-color);
+			position: relative;
+			overflow: hidden;
+		}
+		
+		footer::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary-color), var(--accent-color));
+			background-size: 200% 100%;
+			animation: gradientMove 3s linear infinite;
+		}
+		
+		@keyframes gradientMove {
+			0% { background-position: 0% 50%; }
+			100% { background-position: 200% 50%; }
+		}
+		
+		.footer-logo {
+			font-size: 32px;
+			font-weight: 800;
+			background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary-color));
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			margin-bottom: 25px;
+			letter-spacing: 3px;
+		}
+		
+		.footer-social-links a {
+			color: var(--text-color);
+			text-decoration: none;
+			margin: 0 10px;
+			font-size: 16px;
+			transition: all 0.3s ease;
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+			padding: 12px 24px;
+			border-radius: 30px;
+			background: rgba(255, 255, 255, 0.05);
+			border: 1px solid var(--divider-color);
+		}
+		
+		.footer-social-links a:hover {
+			color: var(--accent-color);
+			background: rgba(169, 62, 23, 0.1);
+			border-color: var(--accent-color);
+			transform: translateY(-3px);
+			box-shadow: 0 8px 20px rgba(169, 62, 23, 0.2);
+		}
+		
+		.footer-social-links a i {
+			font-size: 18px;
+		}
+		
+		.footer-social-links a span {
+			font-weight: 600;
+			font-size: 14px;
+		}
+		
+		.footer-copyright {
+			margin-top: 30px;
+			padding-top: 25px;
+			border-top: 1px solid var(--divider-color);
+			color: var(--text-color);
+			font-size: 14px;
+			opacity: 0.7;
+		}
+	</style>
+</head>
+<body>
+
+    <!-- Header Start -->
+	<header class="main-header">
+		<div class="header-sticky">
+			<nav class="navbar navbar-expand-lg">
+				<div class="container">
+					<!-- Logo Start -->
+					<a class="navbar-brand" href="#" style="width: 170px; font-size: 24px; font-weight: 800; letter-spacing: 2px; background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+						DEGNO VPN
+					</a>
+					<!-- Logo End -->
+
+					<!-- Main Menu Start -->
+					<div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li class="nav-item"><a class="nav-link" href="#our-services">Функции</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#our-servers">Серверы</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#our-faqs">FAQ</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Header Btn Start -->
+                        <div class="header-btn">
+                            <a href="https://t.me/degnovpnbot" class="btn-default">Получить доступ</a>
+                        </div>
+                        <!-- Header Btn End -->
+					</div>
+					<!-- Main Menu End -->
+					<div class="navbar-toggle">
+                    <a href="#" aria-haspopup="true" role="button" tabindex="0" class="slicknav_btn slicknav_collapsed">
+                        <span class="slicknav_menutxt"></span>
+                        <span class="slicknav_icon slicknav_no-text">
+                            <span class="slicknav_icon-bar"></span>
+                            <span class="slicknav_icon-bar"></span>
+                            <span class="slicknav_icon-bar"></span>
+                        </span>
+                    </a>
+                </div>
+				<div class="responsive-menu">
+                    <div class="slicknav_menu">
+                        <ul class="slicknav_nav slicknav_hidden" aria-hidden="true" role="menu" style="display: none;">
+                            <li class="nav-item"><a class="nav-link" href="#our-services" role="menuitem" tabindex="-1">Функции</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#our-servers" role="menuitem" tabindex="-1">Серверы</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#our-faqs" role="menuitem" tabindex="-1">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!-- Header End -->
+
+    <div class="hero">
+        <div class="particles" id="particles"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <!-- Hero Content Start -->
+                    <div class="hero-content">
+                        <!-- Section Title Start -->
+                        <div class="section-title">
+                            <h1 class="wow fadeInUp" data-cursor="-opaque">Безопасное и быстрое приложение <span>DEGNO VPN</span></h1>
+                            <p class="wow fadeInUp" data-wow-delay="0.2s">Установка DEGNO VPN за минуту — ключ предоставляет сервис DEGNO</p>
+                            <div class="wow fadeInUp" data-wow-delay="0.3s" style="margin-top: 25px;">
+                                <div style="display: inline-block; background: linear-gradient(135deg, var(--accent-color), var(--accent-secondary-color)); padding: 12px 30px; border-radius: 50px; color: white; font-weight: 600; font-size: 16px; box-shadow: 0 8px 25px rgba(169, 62, 23, 0.3);">
+                                    <i class="fas fa-gift" style="margin-right: 10px;"></i>4 дня бесплатного пробного периода
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <!-- Hero Button Start -->
+                        <div class="hero-btn wow fadeInUp" data-wow-delay="0.4s">
+                            <a href="https://t.me/degnovpnbot" class="btn-default">Получить доступ</a>
+                            <a href="https://t.me/degnovpnbot" target="_blank" class="btn-default btn-highlighted">Попробовать</a>
+                        </div>
+                        <!-- Hero Button End -->
+                    </div>
+                    <!-- Hero Content End -->
+                </div>
+            </div>
+        </div>
+        
+ 
+
+    <div class="about-us">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <h2 class="text-effect" data-cursor="-opaque">О нас</h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <!-- About Us Box Start -->
+                    <div class="about-us-box">
+                        <!-- About Us Item Start -->
+                        <div class="about-us-item">
+                            <div class="about-item-content">
+                                <h3>Пользователей по миру</h3>
+                                <h2><span class="counter">10000</span>+</h2>
+                            </div>
+                            <div class="icon-box">
+                                <img src="assets/icon-about-item-2.svg" alt="">
+                            </div>
+                        </div>
+                        <!-- About Us Item End -->
+                        <!-- About Item Image Start -->
+                        <div class="about-item-image">
+                            <img src="assets/about-item-image-2.png" alt="">
+                        </div>
+                        <!-- About Item Image End -->
+                    </div>
+                    <!-- About Us Box End -->
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <!-- About Us Box Start -->
+                    <div class="about-us-box">
+                        <!-- About Us Item Start -->
+                        <div class="about-us-item">
+                            <div class="about-item-content">
+                                <h3>Серверов</h3>
+                                <h2>21</h2>
+                            </div>
+                            <div class="icon-box">
+                                <img src="assets/icon-about-item-3.svg" alt="">
+                            </div>
+                        </div>
+                        <!-- About Us Item End -->
+                        <!-- About Item Image Start -->
+                        <div class="about-item-image">
+                            <img src="assets/about-item-image-3.png" alt="">
+                        </div>
+                        <!-- About Item Image End -->
+                    </div>
+                    <!-- About Us Box End -->
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <!-- About Us Box Start -->
+                    <div class="about-us-box">
+                        <!-- About Us Item Start -->
+                        <div class="about-us-item">
+                            <div class="about-item-content">
+                                <h3>Стран присутствия</h3>
+                            </div>
+                            <div class="icon-box">
+                                <img src="assets/icon-about-item-1.svg" alt="">
+                            </div>
+                        </div>
+                        <!-- About Us Item End -->
+                        <!-- About Item Image Start -->
+                        <div class="about-item-image">
+                            <img src="assets/about-item-image-1.png" alt="">
+                        </div>
+                        <!-- About Item Image End -->
+                    </div>
+                    <!-- About Us Box End -->
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <!-- About Us Box Start -->
+                    <div class="about-us-box">
+                        <!-- About Us Item Start -->
+                        <div class="about-us-item">
+                            <div class="about-item-content">
+                                <h3>Обход блокировок</h3>
+                                <h2><i class="fas fa-unlock-alt"></i></h2>
+                            </div>
+                            <div class="icon-box">
+                                <img src="assets/icon-about-item-4.svg" alt="">
+                            </div>
+                        </div>
+                        <!-- About Us Item End -->
+                        <!-- About Item Image Start -->
+                        <div class="about-item-image">
+                            <img src="assets/about-item-image-4.png" alt="">
+                        </div>
+                        <!-- About Item Image End -->
+                    </div>
+                    <!-- About Us Box End -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="our-services" id="our-services">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-lg-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <h3 class="wow fadeInUp">Главные преимущества</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Преимущества DEGNO VPN
+                            <br>
+                            <span>интеллектуальные решения нового поколения</span>
+                        </h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <!-- Service Item Start -->
+                    <div class="service-item wow fadeInUp">
+                        <div class="service-item-content">
+                            <h3><a href="https://t.me/degnovpnbot">Сверхвысокая скорость</a></h3>
+                            <p>Драйвер на базе современного протокола обеспечивает маршрут, максимально близкий к прямому подключению и без лишних задержек.</p>
+                        </div>
+                    </div>
+                    <!-- Service Item End -->
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <!-- Service Item Start -->
+                    <div class="service-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="service-item-content">
+                            <h3><a href="https://t.me/degnovpnbot">Надёжная конфиденциальность</a></h3>
+                            <p>В DEGNO VPN применяется многослойное шифрование с динамическими ключами — ваши данные недоступны даже нам</p>
+                        </div>
+                    </div>
+                    <!-- Service Item End -->
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <!-- Service Item Start -->
+                    <div class="service-item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="service-item-content">
+                            <h3><a href="https://t.me/degnovpnbot">Умная оптимизация</a></h3>
+                            <p>ИИ-алгоритмы DEGNO VPN сами подбирают лучший сервер и протокол для максимальной скорости и стабильности.</p>
+                        </div>
+                    </div>
+                    <!-- Service Item End -->
+                </div>
+
+                <div class="col-lg-12">
+                    <!-- Service List Start -->
+                    <div class="service-list wow fadeInUp" data-wow-delay="0.6s">
+                        <ul>
+                            <li><i class="fas fa-shield-alt"></i> DEGNO VPN</li>
+                            <li><i class="fas fa-bolt"></i> VLESS Protocol</li>
+                            <li><i class="fas fa-network-wired"></i> Xray</li>
+                            <li><i class="fas fa-mobile-alt"></i> Удобный интерфейс</li>
+                            <li><i class="fas fa-headset"></i> Поддержка 24/7</li>
+                            <li><i class="fas fa-route"></i> SmartRoute</li>
+                            <li><i class="fas fa-ad"></i> Анти-реклама YouTube</li>
+                        </ul>
+                    </div>
+                    <!-- Service List End -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="our-services" id="our-servers">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-lg-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <h3 class="wow fadeInUp">Глобальная сеть серверов</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Высокая скорость повсюду
+                            <br>
+                            <span>по всему миру для оптимального соединения</span>
+                        </h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <!-- Team Member Item Start -->
+                    <div class="team-item wow fadeInUp">
+                        <!-- team Image Start -->
+                        <div class="team-image">
+                            <a href="https://t.me/degnovpnbot" class="image-anime" data-cursor-text="Скачать">
+                                <figure>
+                                    <img src="images/rf.jpg" alt="Россия">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- team Image End -->
+
+                        <!-- Team Body Start -->
+                        <div class="team-body">
+                            <!-- Team Content Start -->
+                            <div class="team-content">
+                                <h3><a href="https://t.me/degnovpnbot">🇷🇺 Россия</a></h3>
+                                <p>YouTube (без рекламы)</p>
+                                <p>Пинг 30ms</p>
+                                <p>Скорость 30 Gbps</p>
+                                <p>SLA 99.99%</p>
+                            </div>
+                            <!-- Team Content End -->
+                        </div>
+                        <!-- Team Body End -->
+                    </div>
+                    <!-- Team Member Item End -->
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <!-- Team Member Item Start -->
+                    <div class="team-item wow fadeInUp" data-wow-delay="0.2s">
+                        <!-- team Image Start -->
+                        <div class="team-image">
+                            <a href="https://t.me/degnovpnbot" class="image-anime" data-cursor-text="Скачать">
+                                <figure>
+                                    <img src="images/usa.jpg" alt="США">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- team Image End -->
+
+                        <div class="team-body">
+                                <!-- Team Content Start -->
+                                <div class="team-content">
+                                    <h3><a href="https://t.me/degnovpnbot">🇺🇸 США</a></h3>
+                                    <p>Ашберн / Нью-Йорк</p>
+                                    <p>Пинг 110ms</p>
+                                    <p>Скорость 30 Gbps</p>
+                                    <p>SLA 99.98%</p>
+                                </div>
+                                <!-- Team Content End -->
+                        </div>
+                        <!-- Team Body End -->
+                    </div>
+                    <!-- Team Member Item End -->
+                </div>
+
+                 <div class="col-lg-3 col-md-6">
+                    <!-- Team Member Item Start -->
+                    <div class="team-item wow fadeInUp" data-wow-delay="0.4s">
+                        <!-- team Image Start -->
+                        <div class="team-image">
+                            <a href="https://t.me/degnovpnbot" class="image-anime" data-cursor-text="Скачать">
+                                <figure>
+                                    <img src="images/lon.jpg" alt="Англия">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- team Image End -->
+
+                        <!-- Team Body Start -->
+                        <div class="team-body">
+                                <!-- Team Content Start -->
+                                <div class="team-content">
+                                    <h3><a href="https://t.me/degnovpnbot">🇬🇧 Англия</a></h3>
+                                    <p>Лондон</p>
+                                    <p>Пинг 95ms</p>
+                                    <p>Скорость 30 Gbps</p>
+                                    <p>SLA 99.99%</p>
+                                </div>
+                                <!-- Team Content End -->
+                        </div>
+                        <!-- Team Body End -->
+                    </div>
+                    <!-- Team Member Item End -->
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <!-- Team Member Item Start -->
+                    <div class="team-item wow fadeInUp" data-wow-delay="0.6s">
+                        <!-- team Image Start -->
+                        <div class="team-image">
+                            <a href="https://t.me/degnovpnbot" class="image-anime" data-cursor-text="Скачать">
+                                <figure>
+                                    <img src="images/vn.jpg" alt="Австрия">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- team Image End -->
+
+                        <!-- Team Body Start -->
+                        <div class="team-body">
+                                <!-- Team Content Start -->
+                                <div class="team-content">
+                                    <h3><a href="https://t.me/degnovpnbot">🇦🇹 Австрия</a></h3>
+                                    <p>Вена</p>
+                                    <p>Пинг 75ms</p>
+                                    <p>Скорость 30 Gbps</p>
+                                    <p>SLA 99.99%</p>
+                                </div>
+                                <!-- Team Content End -->
+                        </div>
+                        <!-- Team Body End -->
+                    </div>
+                    <!-- Team Member Item End -->
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <!-- Team Member Item Start -->
+                    <div class="team-item wow fadeInUp" data-wow-delay="0.8s">
+                        <!-- team Image Start -->
+                        <div class="team-image">
+                            <a href="https://t.me/degnovpnbot" class="image-anime" data-cursor-text="Скачать">
+                                <figure>
+                                    <img src="images/cn.jpg" alt="Китай">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- team Image End -->
+
+                        <!-- Team Body Start -->
+                        <div class="team-body">
+                                <!-- Team Content Start -->
+                                <div class="team-content">
+                                    <h3><a href="https://t.me/degnovpnbot">🇨🇳 Китай</a></h3>
+                                    <p>Пекин / Гонг-Конг</p>
+                                    <p>Пинг 97ms</p>
+                                    <p>Скорость 35 Gbps</p>
+                                    <p>SLA 99.99%</p>
+                                </div>
+                                <!-- Team Content End -->
+                        </div>
+                        <!-- Team Body End -->
+                    </div>
+                    <!-- Team Member Item End -->
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <!-- Team Member Item Start -->
+                    <div class="team-item wow fadeInUp" data-wow-delay="1s">
+                        <!-- team Image Start -->
+                        <div class="team-image">
+                            <a href="https://t.me/degnovpnbot" class="image-anime" data-cursor-text="Скачать">
+                                <figure>
+                                    <img src="images/fin.jpg" alt="Финляндия">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- team Image End -->
+
+                        <!-- Team Body Start -->
+                        <div class="team-body">
+                                <!-- Team Content Start -->
+                                <div class="team-content">
+                                    <h3><a href="https://t.me/degnovpnbot">🇫🇮 Финляндия</a></h3>
+                                    <p>Хельсинки</p>
+                                    <p>Пинг 37ms</p>
+                                    <p>Скорость 35 Gbps</p>
+                                    <p>SLA 99.99%</p>
+                                </div>
+                                <!-- Team Content End -->
+                        </div>
+                        <!-- Team Body End -->
+                    </div>
+                    <!-- Team Member Item End -->
+                </div>
+
+                 <div class="col-lg-3 col-md-6">
+                    <!-- Team Member Item Start -->
+                    <div class="team-item wow fadeInUp" data-wow-delay="1.2s">
+                        <!-- team Image Start -->
+                        <div class="team-image">
+                            <a href="https://t.me/degnovpnbot" class="image-anime" data-cursor-text="Скачать">
+                                <figure>
+                                    <img src="images/sw.jpg" alt="Швеция">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- team Image End -->
+
+                        <!-- Team Body Start -->
+                        <div class="team-body">
+                                <!-- Team Content Start -->
+                                <div class="team-content">
+                                    <h3><a href="https://t.me/degnovpnbot">🇸🇪 Швеция</a></h3>
+                                    <p>Стокгольм</p>
+                                    <p>Пинг 32ms</p>
+                                    <p>Скорость 35 Gbps</p>
+                                    <p>SLA 99.97%</p>
+                                </div>
+                                <!-- Team Content End -->
+                        </div>
+                        <!-- Team Body End -->
+                    </div>
+                    <!-- Team Member Item End -->
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <!-- Team Member Item Start -->
+                    <div class="team-item wow fadeInUp" data-wow-delay="1.4s">
+                        <!-- team Image Start -->
+                        <div class="team-image">
+                            <a href="https://t.me/degnovpnbot" class="image-anime" data-cursor-text="Скачать">
+                                <figure>
+                                    <img src="images/in.jpg" alt="Индия">
+                                </figure>
+                            </a>
+                        </div>
+                        <!-- team Image End -->
+
+                        <!-- Team Body Start -->
+                        <div class="team-body">
+                                <!-- Team Content Start -->
+                                <div class="team-content">
+                                    <h3><a href="https://t.me/degnovpnbot">🇮🇳 Индия</a></h3>
+                                    <p>Мумбаи</p>
+                                    <p>Пинг 120ms</p>
+                                    <p>Скорость 35 Gbps</p>
+                                    <p>SLA 99.99%</p>
+                                </div>
+                                <!-- Team Content End -->
+                        </div>
+                        <!-- Team Body End -->
+                    </div>
+                    <!-- Team Member Item End -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="our-services" id="our-faqs">
+        <div class="container">
+            <div class="row section-row">
+                <div class="col-lg-12">
+                    <!-- Section Title Start -->
+                    <div class="section-title section-title-center">
+                        <h3 class="wow fadeInUp">Ответы на вопросы</h3>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Часто задаваемые вопросы
+                            <br>
+                            <span>ответы на самые популярные вопросы</span>
+                        </h2>
+                    </div>
+                    <!-- Section Title End -->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- FAQ Item Start -->
+                    <div class="faq-item wow fadeInUp">
+                        <div class="faq-question">
+                            <h3>Что представляет собой протокол VLESS?</h3>
+                            <div class="faq-icon">+</div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>VLESS — это инновационный сетевой протокол последнего поколения, обеспечивающий высокую скорость и надёжную защиту данных.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item End -->
+
+                    <!-- FAQ Item Start -->
+                    <div class="faq-item wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="faq-question">
+                            <h3>Есть ли лимиты на трафик?</h3>
+                            <div class="faq-icon">+</div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Нет, сервис DEGNO VPN предоставляет полностью безлимитный трафик без ограничений по скорости и объёму.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item End -->
+
+                    <!-- FAQ Item Start -->
+                    <div class="faq-item wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="faq-question">
+                            <h3>С какими устройствами совместим?</h3>
+                            <div class="faq-icon">+</div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>DEGNO VPN работает на Windows, macOS, Android, iOS и Linux. Каждое приложение адаптировано под платформу.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item End -->
+
+                    <!-- FAQ Item Start -->
+                    <div class="faq-item wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="faq-question">
+                            <h3>Насколько надёжна защита?</h3>
+                            <div class="faq-icon">+</div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Мы применяем современные технологии шифрования. Данные не сохраняются и не отслеживаются.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item End -->
+
+                    <!-- FAQ Item Start -->
+                    <div class="faq-item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="faq-question">
+                            <h3>Какую скорость обеспечивает?</h3>
+                            <div class="faq-icon">+</div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>DEGNO VPN достигает скорости до 25 Гбит/с. Конечная скорость зависит от вашего подключения.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item End -->
+
+                    <!-- FAQ Item Start -->
+                    <div class="faq-item wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="faq-question">
+                            <h3>Как получить пробный период?</h3>
+                            <div class="faq-icon">+</div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>🎁 Мы предоставляем 4 дня бесплатного пробного периода для всех новых пользователей. Просто напишите боту @degnovpnbot для получения доступа.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item End -->
+
+                    <!-- FAQ Item Start -->
+                    <div class="faq-item wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="faq-question">
+                            <h3>Реферальная программа</h3>
+                            <div class="faq-icon">+</div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>10% с пополнений приглашённых пользователей. Вывод на основной баланс или карту от 1500₽.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item End -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="padding: 80px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3 class="footer-logo">DEGNO VPN</h3>
+                    <div class="footer-social-links">
+                        <a href="https://t.me/VPNSUPPORTNET"><i class="fab fa-telegram"></i><span>Поддержка</span></a>
+                        <a href="https://t.me/degnovpnbot"><i class="fab fa-telegram"></i><span>Бот</span></a>
+                        <a href="https://t.me/degnovpn"><i class="fab fa-telegram"></i><span>Канал</span></a>
+                    </div>
+                    <div class="footer-copyright">
+                        © 2026 DEGNO VPN. Все права защищены.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Initialize WOW.js
+            new WOW().init();
+            
+            // Initialize SlickNav
+            $('.navbar-toggle').slicknav();
+            
+            // Sticky header
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 100) {
+                    $('.header-sticky').addClass('active');
+                } else {
+                    $('.header-sticky').removeClass('active');
+                }
+            });
+            
+            // Mobile menu toggle
+            $('.navbar-toggle').on('click', function(e) {
+                e.preventDefault();
+                $(this).toggleClass('slicknav_open');
+                $('.slicknav_menu').slideToggle();
+            });
+            
+            // Smooth scroll
+            $('a[href^="#"]').on('click', function(e) {
+                e.preventDefault();
+                const target = $(this.getAttribute('href'));
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - 80
+                    }, 800);
+                }
+            });
+            
+            // Counter animation
+            $('.counter').counterUp({
+                delay: 10,
+                time: 2000
+            });
+            
+            // Create particles
+            function createParticles() {
+                const particlesContainer = document.getElementById('particles');
+                const particleCount = 30;
+                
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 6 + 's';
+                    particle.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                    particlesContainer.appendChild(particle);
+                }
+            }
+            
+            createParticles();
+            
+            // FAQ Accordion
+            $('.faq-question').on('click', function() {
+                const $faqItem = $(this).parent('.faq-item');
+                const $isActive = $faqItem.hasClass('active');
+                
+                // Close all FAQ items
+                $('.faq-item').removeClass('active');
+                
+                // Open clicked item if it wasn't active
+                if (!$isActive) {
+                    $faqItem.addClass('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
